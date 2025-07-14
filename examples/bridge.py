@@ -18,6 +18,11 @@ def get_bridge_by_name(name):
 
 def get_bridges_by_uuid():
     ovs = Open_vSwitchOperations.get()
+    return ovs.bridges
+
+def get_all_bridgess():
+    ovs = Open_vSwitchOperations.get()
+    
     for bridge_uuid in ovs.bridges:
         bridge = BridgeOperations.get_bridge_by_uuid(bridge_uuid)
         print('%s: %s' % (bridge.name, str(bridge)))
