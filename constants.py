@@ -30,3 +30,7 @@ class Operations(enum.Enum):
     update = 'update'
     delete = 'delete'
     mutate = 'mutate'
+
+class Tables():
+    col1 = 'types'
+    
